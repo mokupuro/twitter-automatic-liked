@@ -4,9 +4,9 @@ import config
 
 def main():
     # consumer　第一引数に(consumer　key)　第二引数に(consumer　secret) #
-    auth = tweepy.OAuthHandler(config.MOKUPRO_CONSUMER_KEY, config.MOKUPRO_CONSUMER_SECRET)
+    auth = tweepy.OAuthHandler(config.CONSUMER_KEY, config.CONSUMER_SECRET)
     # ACCESS_TOKEN_KEY 第一引数に(Access token)　第二引数に(Access token secret) #
-    auth.set_access_token(config.MOKUPRO_ACCESS_TOKEN, config.MOKUPRO_ACCESS_TOKEN_SECRET)
+    auth.set_access_token(config.ACCESS_TOKEN, config.ACCESS_TOKEN_SECRET)
 
     # wait_on_rate_limit = レート制限が補充されるのを自動的に待つかどうか #
     # wait_on_rate_limit_notify = Tweepyがレート制限の補充を待っているときに通知を出力するかどうか #
@@ -16,7 +16,7 @@ def main():
 
     # 取得したいキーワード #
     search_list = ['#もくプロ', '#プログラミング勉強中',
-                '#ハッカソン', '#春から帝京大学', '#春から明星', '#春から帝京', '帝京大学' ]
+                '#ハッカソン', '#春から帝京大学', '#春から帝京', '帝京大学' ]
     # ツイート数50件 #
     tweet_count = 50
 
